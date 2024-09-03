@@ -17,7 +17,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="/ejemplo/">
-            <img src="<?= asset('./images/logo_cargo.jpg') ?>" width="40px" alt="cit">
+            <img src="<?= asset('./images/logo_cargo.png') ?>" width="50px" alt="cit">
             Cargo Expresso
         </a>
         <div class="collapse navbar-collapse" id="navbarToggler">

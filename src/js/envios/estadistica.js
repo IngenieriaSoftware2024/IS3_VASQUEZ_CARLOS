@@ -26,7 +26,7 @@ const getEstadisticas = async () => {
     const config = { method: "GET" }
     const response = await fetch(url, config);
     const data = await response.json()
-    console.log(data);
+    // console.log(data);
 
     if(data){
         if(chartVentas.data.datasets[0]) {

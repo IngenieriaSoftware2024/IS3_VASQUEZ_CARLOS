@@ -18,7 +18,7 @@ const Buscar = async () => {
     if (datos) {
         datatable.rows.add(datos).draw();
     }
-    console.log(datos)
+    // console.log(datos)
 };
 
 const datatable = new DataTable('#envios', {

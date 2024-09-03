@@ -36,7 +36,7 @@ const Envios = async () => {
     
         const respuesta = await fetch(url, config);
         const datos = await respuesta.json();
-        console.log(datos)
+        // console.log(datos)
 
         datos.forEach(pedido => {
             // Convertir las coordenadas de origen y destino
