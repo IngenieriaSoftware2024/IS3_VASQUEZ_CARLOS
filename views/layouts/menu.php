@@ -28,22 +28,21 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/IS3_VASQUEZ_CARLOS/inicio"><i class="bi bi-house-fill me-2"></i>Inicio</a>
                     </li>
-
-                    <div class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            <i class="bi bi-gear me-2"></i>Dropdown
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/IS3_VASQUEZ_CARLOS/envios"><i class="bi bi-send me-2"></i>Envios</a>
+                    </li>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-send-check me-2"></i>Información de Envios
                         </a>
-                        <ul class="dropdown-menu  dropdown-menu-dark " id="dropwdownRevision" style="margin: 0;">
-                            <!-- <h6 class="dropdown-header">Información</h6> -->
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
                             <li>
-                                <a class="dropdown-item nav-link text-white " href="/aplicaciones/nueva"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Subitem</a>
+                                <a class="dropdown-item text-white" href="/IS3_VASQUEZ_CARLOS/estadistica">
+                                    <i class="bi bi-bar-chart-steps me-2"></i>Estadística
+                                </a>
                             </li>
-
-
-
                         </ul>
                     </div>
-
                 </ul>
                 <div class="col-lg-1 d-grid mb-lg-0 mb-2">
                     <!-- Ruta relativa desde el archivo donde se incluye menu.php -->
