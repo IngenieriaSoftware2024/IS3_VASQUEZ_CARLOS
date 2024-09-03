@@ -64,7 +64,7 @@
         <div class="row justify-content-center text-center">
             <div class="col-12">
                 <p style="font-size:xx-small; font-weight: bold;">
-                        Comando de Informática y Tecnología, <?= date('Y') ?> &copy;
+                        Cargo Expresso, Parcial VASQUEZ O, <?= date('Y') ?> &copy;
                 </p>
             </div>
         </div>

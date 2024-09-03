@@ -45,3 +45,12 @@ INSERT INTO rol (rol_nombre, rol_nombre_ct, rol_app) VALUES
 
 INSERT INTO permiso (permiso_usuario,permiso_rol) VALUES 
 (1,1), (2,2), (3,3); 
+
+
+-- ENVIOS
+CREATE TABLE envios (
+    envio_id INT AUTO_INCREMENT PRIMARY KEY,
+    envio_cliente INT,
+    envio_empleado VARCHAR(150),
+    
+)
