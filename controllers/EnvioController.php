@@ -19,6 +19,12 @@ class EnvioController {
         hasPermission(['USER', 'ADMINISTRATIVO', 'ADMINSTRADOR']);
         $router->render('envios/estadistica', [], 'layouts/menu');
     }
+    public static function index3(Router $router)
+    {   
+        isAuth();
+        hasPermission(['USER', 'ADMINISTRATIVO', 'ADMINSTRADOR']);
+        $router->render('envios/mapa', [], 'layouts/menu');
+    }
 
     public static function BuscarAPI()
     {
@@ -67,6 +73,19 @@ class EnvioController {
             ]);
         }
 
+    }
+
+    public static function mapaAPI()
+    {
+        $sql = "SELECT * FROM envios";
+
+        try {
+            $envios = Usuario::fetchArray($sql);
+            echo json_encode($envios);
+            exit;
+        } catch (Exception $e) {
+            return [];
+        }
     }
 }
 

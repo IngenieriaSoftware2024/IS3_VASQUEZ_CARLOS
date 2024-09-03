@@ -40,6 +40,9 @@
                                 <a class="dropdown-item text-white" href="/IS3_VASQUEZ_CARLOS/estadistica">
                                     <i class="bi bi-bar-chart-steps me-2"></i>Estadística
                                 </a>
+                                <a class="dropdown-item text-white" href="/IS3_VASQUEZ_CARLOS/mapa">
+                                    <i class="bi bi-geo"></i>Envio en el Mapa
+                                </a>
                             </li>
                         </ul>
                     </div>

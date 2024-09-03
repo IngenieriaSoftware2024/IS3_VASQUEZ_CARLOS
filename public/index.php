@@ -21,7 +21,8 @@ $router->get('/envios', [EnvioController::class,'index']);
 $router->get('/API/envios/buscar', [EnvioController::class,'buscarAPI']);
 $router->get('/estadistica', [EnvioController::class,'index2']);
 $router->get('/API/envio/estadistica', [EnvioController::class,'estadisticaEnvioAPI']);
-
+$router->get('/mapa', [EnvioController::class,'index3']);
+$router->get('/API/envio/mapa', [EnvioController::class,'mapaAPI']);
 
 
 
