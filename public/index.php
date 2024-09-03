@@ -11,6 +11,8 @@ $router->setBaseURL('/' . $_ENV['APP_NAME']);
 
 $router->get('/', [LoginController::class,'index']);
 $router->post('/API/login', [LoginController::class,'loginAPI']);
+$router->get('/inicio', [LoginController::class, 'inicio']);
+$router->get('/logout', [LoginController::class, 'logout']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

@@ -31,22 +31,8 @@ const IniciarSesion = async (e) => {
 
         if (codigo == 1) {
 
-            Swal.fire({
-                title: '¡Éxito!',
-                text: mensaje,
-                icon: 'success',
-                showConfirmButton: false,
-                timer: 1500,
-                timerProgressBar: true,
-                background: '#e0f7fa',
-                customClass: {
-                    title: 'custom-title-class',
-                    text: 'custom-text-class'
-                }
-
-            });
             formulario.reset();
-            // location.href = '/LOGIN/menu'
+            location.href = '/IS3_VASQUEZ_CARLOS/inicio'
         } else {
             Swal.fire({
                 title: '¡Error!',
@@ -67,6 +53,8 @@ const IniciarSesion = async (e) => {
     } catch (error) {
         console.log(error)
     }
+
+    
 
 }
 

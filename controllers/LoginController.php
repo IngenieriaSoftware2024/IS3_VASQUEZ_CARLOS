@@ -8,6 +8,7 @@ use MVC\Router;
 
 class LoginController {
     public static function index(Router $router){
+        isNotAuth();
         $router->render('login/login', [], 'layouts/layout');
     }
 
@@ -23,11 +24,12 @@ class LoginController {
                 $usuarioBD = $usuario->usuarioExistente();
                 //VALIDA QUE LA CONTRASEÑA ESTE CORRECTA
                 if (password_verify($_POST['usu_password'], $usuarioBD['usu_password'])) {
-                    // session_start();
+                    session_start();
                     $_SESSION['user'] = $usuarioBD;
 
      
                     $permisos = Usuario::fetchArray("SELECT * FROM permiso inner join rol on permiso_rol = rol_id where rol_situacion = 1 AND permiso_usuario = " . $usuarioBD['usu_id']);
+       
                     
                     foreach ($permisos as $permiso) {
                         $_SESSION[$permiso['rol_nombre_ct']] = 1;
@@ -36,7 +38,7 @@ class LoginController {
                     http_response_code(200);
                     echo json_encode([
                         'codigo' => 1,
-                        'mensaje' => 'Bienvenido al CARGO EXPRESSO, ' . $usuarioBD['usu_nombre'],
+                        // 'mensaje' => 'Bienvenido al CARGO EXPRESSO, ' . $usuarioBD['usu_nombre'],
                     ]);
                     exit;
                 } else {
@@ -67,6 +69,21 @@ class LoginController {
             exit;
         }
         
+    }
+
+    public static function inicio(Router $router)
+    {
+        isAuth();
+        hasPermission(['USER', 'ADMINISTRATIVO', 'ADMINSTRADOR']);
+        $router->render('login/inicio', [], 'layouts/menu');
+    }
+
+    public static function logout()
+    {
+        isAuth();
+        $_SESSION = [];
+        session_destroy();
+        header('Location: /IS3_VASQUEZ_CARLOS/');
     }
 
 }

@@ -19,14 +19,14 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="/ejemplo/">
-                <img src="<?= asset('./images/cit.png') ?>" width="35px'" alt="cit">
-                Aplicaciones
+                <img src="<?= asset('./images/logo_cargo.jpg') ?>" width="40px'" alt="cit">
+                Cargo Expresso
             </a>
             <div class="collapse navbar-collapse" id="navbarToggler">
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin: 0;">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/ejemplo/"><i class="bi bi-house-fill me-2"></i>Inicio</a>
+                        <a class="nav-link" aria-current="page" href="/IS3_VASQUEZ_CARLOS/inicio"><i class="bi bi-house-fill me-2"></i>Inicio</a>
                     </li>
 
                     <div class="nav-item dropdown ">
@@ -47,7 +47,7 @@
                 </ul>
                 <div class="col-lg-1 d-grid mb-lg-0 mb-2">
                     <!-- Ruta relativa desde el archivo donde se incluye menu.php -->
-                    <a href="/menu/" class="btn btn-danger"><i class="bi bi-arrow-bar-left"></i>MENÚ</a>
+                    <a href="/IS3_VASQUEZ_CARLOS/logout" class="btn btn-danger"><i class="bi bi-arrow-bar-left"></i>SALIR</a>
                 </div>
 
 
@@ -74,3 +74,4 @@
 </body>
 
 </html>
+<script src="<?= asset('./build/js/inicio/index.js') ?>"></script>

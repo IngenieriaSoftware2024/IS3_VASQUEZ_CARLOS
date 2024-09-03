@@ -1,39 +1,55 @@
-<h1 class="text-center">Bienvenido a la CARGO EXPRESSO</h1>
+<h1 class="text-center">Bienvenido a la pagina principal de CARGO EXPRESSO</h1>
 
-<?php if ($_SESSION['user']['rol_nombre_ct'] == 'TIENDA_ADMIN') : ?>
+
+<?php if ($_SESSION['user']['rol_nombre_ct'] == 'USER') : ?>
     <div class="row">
         <div class="container d-flex justify-content-center align-items-center mt-5">
             <div class="card text-center shadow-lg">
                 <div class="card-header bg-primary text-white">
-                    ¡Bienvenido, Usted es un Administrador!
+                    ¡Bienvenido, <?= $_SESSION['user']['usu_nombre'] ?>!
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Has ingresado a la aplicación</h5>
-                    <p class="card-text">MVC-2-2024</p>
+                    <p class="card-text">CARGO EXPRESSO</p>
                 </div>
                 <div class="card-footer text-muted">
-                    Usted puede ingresar a todas las funciones de esta aplicación.
+                    Usted puede ver el estado de sus envios, estamos para ayudarte
                 </div>
             </div>
         </div>
     </div>
-<?php else : ?>
+<?php elseif ($_SESSION['user']['rol_nombre_ct'] == 'ADMINISTRATIVO') : ?>
     <div class="row">
         <div class="container d-flex justify-content-center align-items-center mt-5">
             <div class="card text-center shadow-lg">
-                <div class="card-header bg-secondary text-white">
-                    ¡Bienvenido, Usted es un Usuario!
+                <div class="card-header bg-warning text-white">
+                    ¡Bienvenido, <?= $_SESSION['user']['usu_nombre'] ?>!
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Has ingresado a la aplicación</h5>
-                    <p class="card-text">MVC-2-2024</p>
+                    <h5 class="card-title">Usted es administrador de la pagina</h5>
+                    <p class="card-text">CARGO EXPRESSO</p>
                 </div>
                 <div class="card-footer text-muted">
-                    Estamos aca para ayudarte.
+                    Usted puede obtener informacion sobre las estadisticas, envios realizados y la ubicacion de los pedido.
+                </div>
+            </div>
+        </div>
+    </div>
+<?php elseif ($_SESSION['user']['rol_nombre_ct'] == 'ADMINSTRADOR') : ?>
+    <div class="row">
+        <div class="container d-flex justify-content-center align-items-center mt-5">
+            <div class="card text-center shadow-lg">
+                <div class="card-header bg-danger text-white">
+                    ¡Bienvenido, <?= $_SESSION['user']['usu_nombre'] ?>!
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">USTED ES ADMINISTRADOR DE LA APLICACION</h5>
+                    <p class="card-text">CARGO EXPRESSO</p>
+                </div>
+                <div class="card-footer text-muted">
+                    Usted puede administrar los pedidos de los clientes, ver las estadisticas de los envios asi mismo el mapa general de los pedidos
                 </div>
             </div>
         </div>
     </div>
 <?php endif ?>
-
-<script src="build/js/menu/menu.js"></script>
