@@ -45,10 +45,29 @@ class EnvioController {
             ]);
         }
     }
+
+    public static function estadisticaEnvioAPI(){
+
+        try {
+            $sql = "SELECT usu_nombre, COUNT(envio_cliente) AS envios
+                    FROM envios
+                    INNER JOIN usuario ON usu_id = envio_cliente
+                    GROUP BY usu_nombre
+                    ORDER BY envios DESC;";
+
+            $datos = Usuario::fetchArray($sql);
+    
+            echo json_encode($datos);
+
+        } catch (Exception $e) {
+            echo json_encode([
+                'detalle' => $e->getMessage(),
+                'mensaje' => 'Error al realizar la consulta',
+                'codigo' => 0  
+            ]);
+        }
+
+    }
 }
 
-SELECT usu_nombre, COUNT(envio_cliente) AS envios
-FROM envios
-INNER JOIN usuario ON usu_id = envio_cliente
-GROUP BY usu_nombre
-ORDER BY envios DESC;
+

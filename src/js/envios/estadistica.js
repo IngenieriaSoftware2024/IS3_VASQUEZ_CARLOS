@@ -17,7 +17,7 @@ const data = {
 };
 
 const chartVentas= new Chart(ctx, {
-    type: 'doughnut',
+    type: 'bar',
     data: data,
 });
 
@@ -26,7 +26,7 @@ const getEstadisticas = async () => {
     const config = { method: "GET" }
     const response = await fetch(url, config);
     const data = await response.json()
-    // console.log(data);
+    console.log(data);
 
     if(data){
         if(chartVentas.data.datasets[0]) {
@@ -34,8 +34,8 @@ const getEstadisticas = async () => {
             chartVentas.data.datasets[0].data = [];
             chartVentas.data.datasets[0].backgroundColor = [];
             data.forEach(opciones => {
-                chartVentas.data.labels.push(opciones.cliente_nombre);
-                chartVentas.data.datasets[0].data.push(opciones.compras);
+                chartVentas.data.labels.push(opciones.usu_nombre);
+                chartVentas.data.datasets[0].data.push(opciones.envios);
                 chartVentas.data.datasets[0].backgroundColor.push(generateRandomColor());
             });
         }

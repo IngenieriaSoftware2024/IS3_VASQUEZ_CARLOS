@@ -9,6 +9,7 @@ module.exports = {
     'js/inicio/index' : './src/js/inicio/index.js',
     'js/envios/index' : './src/js/envios/index.js',
     'js/envios/estadistica' : './src/js/envios/estadistica.js',
+    'js/envios/mapa' : './src/js/envios/mapa.js',
   },
   output: {
     filename: '[name].js',
