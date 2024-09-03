@@ -38,7 +38,7 @@ const datatable = new DataTable('#envios', {
             data: 'usu_nombre'
         },
         {
-            title: 'Empleado',
+            title: 'Empleado que atendio',
             data: 'envio_empleado'
         },
         {
